@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+    <head>
+        <title>LOGIN</title>
+        <script>
+            function showPwd() {
+                var input = document.getElementById('password');
+                if (input.type === "password") {
+                input.type = "text";
+                } else {
+                input.type = "password";
+                }
+            }
+        </script>
+    </head>
+    <style>
+        label{
+            margin: auto;
+        }
+        input{
+            margin: auto;
+        }
+    </style>
+
+    
+    <body style="background-color: grey;background-image: url(sfondo5.jpg);background-size: cover">
+        <div style="background-color: #0022ff;">
+            <a href="Registrazione.html" style="margin-left: 75%; font-size: 150%; font-family: Arial, Helvetica, sans-serif;">Registrati<a>
+        </div>
+        <form method="POST" action="http://localhost:8080/loginForm">
+            <div style="background-color: #0022ff; margin-left: 35%; margin-right: 35%;margin-top: 17%;">
+                <div style="margin-left: 35%;">
+                    </br>
+                    <label style="font-size: 150%;">User</label>
+                    </br>
+                    </br>
+                    <input type="text" name="user">
+                    </br>
+                    </br>
+                    </br>
+                    <label style="font-size: 150%">Password</label>
+                    </br>
+                    </br>
+                    <input type="password" id="password" name="password">
+                    <input type="checkbox" onclick="showPwd()">
+                    </br>
+                    </br>
+                    </br>
+                    </br>
+                    <input type="submit">
+                </div>
+            </div>
+        </form>
+    </body>
+</html>
