@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>REGISTRAZIONE</title>
+        <script>
+            /*function checkSchedule(){
+                message = ""
+                password = document.getElementById("password").value; 
+                confermapassword = document.getElementById("confermapassword").value;
+                message += "Le password non coincidono \n"
+                if (message.length > 0){
+                    alert(message)
+                    return false
+                }
+                else if(password != confermapassword){
+                    return false
+                }
+                else{
+                    document.schedule.getElementById("schedule").submit();
+                }
+            }*/
+            function showPwd() {
+                var input = document.getElementById('password');
+                if (input.type === "password") {
+                input.type = "text";
+                } else {
+                input.type = "password";
+                }
+            }
+            function showPwd2() {
+                var input = document.getElementById('confermapassword');
+                if (input.type === "password") {
+                input.type = "text";
+                } else {
+                input.type = "password";
+                }
+            }
+            
+        </script>
+
+    </head>
+    <style>
+        label{
+            margin: auto;
+        }
+        input{
+            margin: auto;
+        }
+    </style>
+    <body style="background-color: grey;background-image: url(sfondo5.jpg);background-size: cover">
+        <div style="background-color: #0022ff;">
+            <a href="Login.html" style="margin-left: 75%; font-size: 150%; font-family: Arial, Helvetica, sans-serif;">Accedi<a>
+        </div>
+        <form id = "schedule" name="schedule" method="POST" action="http://localhost:8080/registerform">
+            <div style="background-color: #0022ff; margin-left: 35%; margin-right: 35%;margin-top: 10%;">
+                <div style="margin-left: 35%;">
+                    <label style="font-size: 150%;">Nome</label>
+                    </br>
+                    </br>
+                    <input type="text" name="nome">
+                    </br>
+                    </br>
+                    <label style="font-size: 150%;">Cognome</label>
+                    </br>
+                    </br>
+                    <input type="text" name="cognome">
+                    </br>
+                    </br>
+                    <label style="font-size: 150%;">Data Di Nascita</label>
+                    </br>
+                    </br>
+                    <input type="text" name="dataNascita">
+                    <br>
+                    <br>
+                    <label style="font-size: 150%;">Nickname</label>
+                    </br>
+                    </br>
+                    <input type="text" name="nickname">
+                    <br>
+                    <br>
+                    <label style="font-size: 150%;">Password</label>
+                    <br>
+                    <br>
+                    <input type="password" name="password" id="password">
+                    <input type="checkbox" onclick="showPwd()">
+                    <br>
+                    <br>
+                    <label style="font-size: 150%;" >Conferma Password</label>
+                    </br>
+                    </br>
+                    <input type="password" name="confermaPassword" id="confermapassword">
+                    <input type="checkbox" onclick="showPwd2()">
+                    <br>
+                    <br>
+                    <input  type = "submit">
+                </div>
+            </div>
+        </form>
+
+    </body>
+</html>
